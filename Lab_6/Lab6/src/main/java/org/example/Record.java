@@ -57,7 +57,6 @@ public class Record {
         this.dueDate = dueDate;
     }
 
-
     public LocalDate getReturnedDate() {
         return this.returnedDate;
     }
