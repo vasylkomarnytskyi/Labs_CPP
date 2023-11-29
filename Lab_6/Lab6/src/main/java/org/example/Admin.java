@@ -38,11 +38,4 @@ public class Admin {
             subscription.getReader().getBorrowedBooks().remove(book);
         });
     }
-
-    public static Record getLatestRecordByBook(Library library, Book book) {
-        return records.stream()
-                .filter(x -> x.getBook().equals(book))
-                .max(Comparator.comparingInt(Record::getRecordId))
-                .orElse(null);
-    }
 }
