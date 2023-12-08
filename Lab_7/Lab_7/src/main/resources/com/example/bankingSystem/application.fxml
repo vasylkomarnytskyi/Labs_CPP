@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="699.0" maxWidth="676.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bankingSystem.ApplicationController">
+   <children>
+      <Label layoutX="34.0" layoutY="26.0" prefHeight="17.0" prefWidth="106.0" text="Number of threads:" />
+      <Button fx:id="btnSuspend" layoutX="291.0" layoutY="52.0" mnemonicParsing="false" onAction="#SuspendThreads" prefHeight="25.0" prefWidth="75.0" text="Suspend" />
+      <Button fx:id="btnKill" layoutX="388.0" layoutY="52.0" mnemonicParsing="false" onAction="#KillThreads" prefHeight="25.0" prefWidth="75.0" text="Kill" />
+      <Button fx:id="btnStart" layoutX="291.0" layoutY="15.0" mnemonicParsing="false" onAction="#Start" prefHeight="25.0" prefWidth="75.0" text="Start" />
+      <Button fx:id="btnResume" layoutX="388.0" layoutY="15.0" mnemonicParsing="false" onAction="#ResumeThreads" prefHeight="25.0" prefWidth="75.0" text="Resume" />
+      <TextField fx:id="textFieldNumberOfThreads" layoutX="140.0" layoutY="22.0" prefHeight="25.0" prefWidth="112.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="31.0" layoutY="55.0" prefHeight="17.0" prefWidth="106.0" text="Cash:" />
+      <TextField fx:id="textFieldTotalCash" layoutX="140.0" layoutY="51.0" prefHeight="25.0" prefWidth="112.0" />
+      <TableView fx:id="tableThreadsView" layoutX="20.0" layoutY="98.0" prefHeight="281.0" prefWidth="461.0">
+        <columns>
+          <TableColumn fx:id="ThreadsNameColumn" prefWidth="98.40002822875977" text="Name" />
+          <TableColumn fx:id="ThreadsPriorityColumn" prefWidth="68.79998779296875" text="Priority" />
+          <TableColumn fx:id="ThreadsStatusColumn" prefWidth="86.39994812011719" text="Status" />
+          <TableColumn fx:id="ThreadsChangeTimeColumn" prefWidth="218.39996337890625" text="Change Time" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="textAreaLog" layoutX="20.0" layoutY="392.0" prefHeight="281.0" prefWidth="461.0" />
+   </children>
+</Pane>
